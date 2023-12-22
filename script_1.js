@@ -1,5 +1,8 @@
+import { totalmem } from 'os';
+
 export const getTotalMemoryInMB = () => {
-  return 0;
+  const memory = totalmem();
+  return Math.floor(memory / 1024 / 1024);
 };
 
 const main = () => {
